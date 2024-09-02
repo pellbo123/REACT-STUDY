@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>4_01</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        td {
+            border: 1px solid black;
+            padding: 40px;
+        }
+        #id {
+            margin: 0;
+        }
+        .class{
+            margin: 0;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <div></div> <!-- 상자(Block) 요소/ 의미X 구분을 위해 사용 -->
+    <div>
+        <h1>오늘의 날씨</h1> <!-- h1~h6 (제목[heading]) 블록 요소 -->
+        <!-- h뒤의 숫자가 작을수록 더 중요한 제목 -->
+        <p>맑음</p> <!-- 문장을 의미하는 prargraph의 약자/ 블록 요소 -->
+        <img src="이미지" alt="이미지"><!-- 의외로 인라인(inline) 요소, 절대경로/ 상대경로 있음 -->
+
+        <ul> <!-- undered list의 약자 . 블록 요소 -->
+            <li> <!-- list item의 약자 / 블록 요소 -->
+    
+            </li>
+        </ul>
+        <ol></ol>
+        <a href="https://google.com"> <!-- anchor (닻)의 약자 / 인라인 요소-->
+    
+        </a>
+        <br> <!-- br은 줄 바꿈 -->
+    
+        <span></span> <!-- 표시하는 것 없음, 구분을 위한 최소 단위 -->
+    
+        <input type="text" placeholder="hint"> <!-- 인라인 블록(인라인 특징 + 블록 특징) -->
+        <input type="text" desabled />
+    
+    
+        
+        <label>
+            <input type="radio" name="fruits"/> apple
+            <input type="radio" name="fruits" checked/> lemon
+        </label>
+        <label>
+            <input type="checkbox"/> banana
+        </label>
+    
+        <table> <!-- 표 만들 때 사용, 행(Row)/열(Column) -->
+            <tr> <!--table row (행)-->
+                <td>a</td>
+                <td>b</td> <!--table data (열)-->
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>c</td>
+                <td colspan="2">d</td> <!--column span [열만큼 확장]-->
+            </tr>
+        </table>
+    </div>
+
+    <div class="class"></div> <!--중복 허용/여러개 사용 -->
+
+    <div id="id"></div> <!-- 중복 허용 안함/ 중요한 것에 사용(고유한 속성) -->
+
+    <div data-fruit-name="apple">사과</div>
+    <div data-fruit-name="banana">바나나</div>
+    <script src="main.js"></script>
+
+</body>
+</html>

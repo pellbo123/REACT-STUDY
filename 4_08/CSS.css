@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+.parents {
+    width: 500px;
+    height: 450px;
+    background-color: blue;
+    margin: 20px;
+    overflow: hidden; /*overflow (넘침제어) 내용이 요소의 크기이상으로 넘칠떄 보여지는것을 제어한다.
+                        visible(보여짐), hidden(가려짐), scroll(넘칠때 스크롤이 생김), auto(넘친 내용이 있을때만 스크롤, 이외엔 삭제)*/
+    display: flex; /*flex = 1차원 레이아웃, grid = 2차원 레이아웃, none = 보여짐 특성 없음*/
+    opacity: 1; /*불투명도*/
+    position: relative; /*relative(삼대적=부모 기준), absolute(절대적=자기 기준)*/
+    
+}
+
+.child {
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    /* background-image: url(/4_08/ICON.png);
+    background-repeat: no-repeat; 이미지 반복 조정
+    background-position: 100px 30px; */
+    /*CSS3에 flex, grid 추가*/
+    position: relative;
+    top: 10px;
+    z-index: 1;
+}
+
+.parents2 {
+    border: 2px solid purple;
+    /* display: flex;
+    flex-direction: row;
+    align-items: stretch; */
+    display: grid;
+    grid-template-columns: 200px 50px 100px;
+    grid-template-rows: 50px 100px;
+
+}
+
+.child2 {
+    color: white;
+    /* padding: 10px;
+    margin: 10px; */
+    border: 2px solid blue;
+    /* display: flex; flex container(부모)-flex direction, jusify content, ...||flex item(자식) */
+}

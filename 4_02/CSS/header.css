@@ -1,0 +1,17 @@
+/*헤더 구역*/
+header {
+    height: 10%;
+}
+
+#head {
+    background-color: darkblue;
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#logo {
+    background-color: darkred;
+    height: 100%;
+    width: 170px;
+}

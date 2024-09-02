@@ -1,0 +1,12 @@
+/*바디*/
+body {
+    height: 85%;
+    width: 100%;
+    background-color: rgb(27, 27, 27);
+}
+
+/*섹션*/
+#sec1 {
+    height: 100%;
+    background-color: rgb(40, 40, 40);
+}

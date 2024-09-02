@@ -1,0 +1,121 @@
+* {
+    background-color: rgb(30, 30, 30);
+}
+
+span.orange {
+    color: orange;
+}
+
+
+/* ">" 자식 선택자 */
+ul > .green {
+    color: green; 
+}
+
+/* " "(띄어쓰기) 하위 선택자 */
+ul .red {
+    color: red; 
+}
+
+/* "+" 인접 형태 선택자 */
+/*
+.yellow + li {
+    color: yellow; 
+}
+*/
+
+/* "~" 일반 형제 선택자 */
+.yellow ~ li {
+    color: yellow;
+}
+
+.purple:hover {
+    color: purple;
+}
+.purple:active {
+    color: red;
+}
+
+input:focus {
+    background-color: aqua;
+}
+
+.car span:first-child {
+    color: orange; /*첫 번째 요소*/
+}
+.car h3:last-child {
+    color: gray; /*마지막 요소*/
+}
+.car *:nth-child(2) {
+    color: red;
+}
+.car *:nth-child(4) {
+    color: white; /*요소 선택*/
+}
+.car *:not(span) {
+    font-size: x-large; /*부정자*/
+}
+
+/* before after*/
+.box::before {
+    content: "★";
+}
+.box::after {
+    content: "뒤!!";
+}
+
+/* ^ 선택자 ^ */
+
+
+[disabled] {
+    color: red;
+}
+[type] {
+    color: chartreuse;
+}
+[type="password"] {
+    color: darkred;
+}
+[value="HI"] {
+    color: blue;
+}
+
+/* ^ 속성 선택자 ^ */
+
+.animal {
+    color: red;
+}
+/* 상속을 받는 대표적인 요소들 : font관련, line-weight, color, text-align*/
+/* ^ 상속 설명 ^ */
+
+
+/* "!important" (1위)최상위 중요도 (9999점)*/
+/*
+div {
+    color: red !important; 
+}
+*/
+
+
+#color_yellow {
+    color: yellow; /* 3위 중요도 (100점)*/
+}
+.color_green {
+    color: green; /* 4위 중요도 (10점)*/
+}
+div {
+    color: blue; /* "태그 선택자" 5위 중요도(1점)*/
+}
+* {
+    color: brown; /* "전체 선택자" 6위 중요도(0점)*/
+}
+body {
+    color: violet; /* 상속을 하지 않음 */
+}
+
+/*CSS로 만들 수 있는것 : 박스모델, 글꼴, 문자, 배치, 플렉스(정렬), 전환, 변환, 띄우기(float), 애니메이션 등등*/
+
+
+
+
+
