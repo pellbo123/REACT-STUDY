@@ -1,7 +1,21 @@
-import { useState } from "react";
+import { useParams } from "react-router-dom";
+import styled from 'styled-components'
 
-function Detail () {
-    let [shoes] = useState();
+
+let Box = styled.div`
+    padding : 20px;
+    color : grey;
+`;
+let YelloBtn = styled.button`
+    background : ${props=> props.bg};
+    color : black;
+    padding : 10px;
+`;
+function Detail (props) {
+    let {id} = useParams();
+    let myItem = props.shoes.find(function(x) {
+        return x.id == id
+    });
     return (
         <div className="container">
             <div className="row">
@@ -9,10 +23,16 @@ function Detail () {
                     <img src="/shoe1.png"></img>
                 </div>
                 <div className="col-md-6">
-                    <h4 className="pt-5">상품명</h4>
-                    <p>상품 설명</p>
-                    <p>120000원</p>
+                    <h4 className="pt-5">{myItem.title}</h4>
+                    <p>{myItem.content}</p>
+                    <p>{myItem.price}원</p>
                     <button className="btn btn-danger">주문하기</button>
+                </div>
+                <div>
+                    <Box>
+                        <YelloBtn bg="red">붉은</YelloBtn>
+                        <YelloBtn bg="red">붉은</YelloBtn>
+                    </Box>
                 </div>
             </div>
         </div>
