@@ -1,6 +1,6 @@
+import {useState,useEffect} from "react";
 import { useParams } from "react-router-dom";
 import styled from 'styled-components'
-
 
 let Box = styled.div`
     padding : 20px;
@@ -12,10 +12,16 @@ let YelloBtn = styled.button`
     padding : 10px;
 `;
 function Detail (props) {
+    useEffect(() => {
+        console.log("hello")
+    });
+    let [count, setCount] = useState(0);
+
     let {id} = useParams();
     let myItem = props.shoes.find(function(x) {
         return x.id == id
     });
+    
     return (
         <div className="container">
             <div className="row">
@@ -30,8 +36,9 @@ function Detail (props) {
                 </div>
                 <div>
                     <Box>
-                        <YelloBtn bg="red">붉은</YelloBtn>
-                        <YelloBtn bg="red">붉은</YelloBtn>
+                        <YelloBtn bg="red" onClick={()=> {setCount(count+1)}}>붉은</YelloBtn>
+                        <YelloBtn bg="red">붉은색
+                        </YelloBtn>
                     </Box>
                 </div>
             </div>
