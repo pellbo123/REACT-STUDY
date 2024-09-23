@@ -13,3 +13,10 @@
   background-position: center;
   margin-bottom: 30px;
 }
+.start {
+  opacity: 0;
+}
+.end {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
