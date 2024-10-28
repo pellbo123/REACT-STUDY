@@ -1,8 +1,17 @@
 import { Button, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from "react-redux";
-import { changeName, addAge, addCount, minusCount } from '../store';
+import { changeName, addAge, addCount, delCount } from '../store';
 
 function Cart() {
+  // localStorage.setItem('데이터 이름', '데이터'); //추가
+  // localStorage.getItem('데이터 이름'); //읽기
+  // localStorage.removeItem('데이터 이름'); //삭제
+
+  // localStorage.setItem('obj',JSON.stringify({name :'kim'}))
+  // let aaa = localStorage.getItem('obj')
+  // console.log(aaa);
+  // let b = JSON.parse(aaa)
+  // console.log(b);
     let state = useSelector((state) => state)
     let dispatch = useDispatch()
   return (
@@ -28,14 +37,13 @@ function Cart() {
                     <td>하이요</td>
                     <td>
                         <Button onClick={()=>{
-                            dispatch(changeName('신용불량자 존 데이브'))
+                            dispatch(changeName('kheum'))
                             dispatch(addAge(3))
                             dispatch(addCount(i))
                         }}>+</Button>
                         <Button onClick={()=>{
-                            dispatch(minusCount(i))
+                            dispatch(delCount(i))
                         }}>-</Button>
-                        
                     </td>
                 </tr>
                 ))}

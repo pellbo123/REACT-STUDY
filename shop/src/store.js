@@ -5,15 +5,14 @@ let user = createSlice({
     initialState : {name : 'kim', age : 20},
     reducers : {
         changeName(state, myname) {
-            
             state.name = myname.payload
         },
-        addAge(state, myage){
+        addAge(state, myage) {
             state.age += myage.payload
         }
     }
 })
-export let {changeName, addAge} = user.actions
+export let {changeName,addAge} = user.actions
 let stock = createSlice({
     name : 'stock',
     initialState : [10,11,12]
@@ -21,22 +20,22 @@ let stock = createSlice({
 let cart = createSlice({
     name : 'cart',
     initialState : [
-        {id : 0, name : 'white and black', count : 2 , defaultCount : 2},
+        {id : 0, name : 'white and black', count : 2, defaultCount : 2},
         {id : 2, name : 'Grey Yordan', count : 1, defaultCount : 1},
     ],
     reducers : {
         addCount(state, action) {
             state[action.payload].count++
         },
-        minusCount(state, action) {
+        delCount(state, action) {
             if (state[action.payload].count > state[action.payload].defaultCount){
                 state[action.payload].count--
             }
         }
     }
 })
-export let {addCount,minusCount} = cart.actions
 
+export let {addCount, delCount} = cart.actions
 export default configureStore({
     reducer : {
         user : user.reducer,
